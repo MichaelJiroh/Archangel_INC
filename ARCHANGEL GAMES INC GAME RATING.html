@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Archangel Games Inc Game Rating Site</title>
+        <style>
+            body {
+                background-color: #F0F0F0;
+            }
+            h1{
+                color: #333333;
+                text-align: center;
+                margin-top: 50px;
+            }
+
+            .stars {
+                display: inline-block;
+                margin: 20px;
+            }
+            .star {
+                font-size: 30px;
+                color: black;
+                cursor: pointer;
+                transition: all 0.2s ease-in-out;
+            }
+            .star:hover {
+                color: #ffcc00;
+            }
+            </style>
+    </head>
+    <body>
+        <h1>Rate this game</h1>
+        <div class="stars">
+            <span class="star">&#9733;</span>
+            <span class="star">&#9733;</span>
+            <span class="star">&#9733;</span>
+            <span class="star">&#9733;</span>
+            <span class="star">&#9733;</span>
+        </div>
+        <script>
+            var stars = document.querySelectorAll(".star")
+            for (var i = 0; i < stars.length; i++) {
+                stars[i].addEventListener("click", function() {
+                    for (var j = 0; j < stars.length; j++) {
+                        if (j <= i) {
+                            stars[j].classList.add("active");
+                        } else {
+                            stars[j].classList.remove("active");
+                        }
+                    }
+                });
+            }
+            </script>
+    </body>
+</html>
+            
